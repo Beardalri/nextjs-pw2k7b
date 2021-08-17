@@ -1,0 +1,31 @@
+.item {
+  display: grid;
+  grid-template-columns: 1fr 50% 1fr 1fr 1fr 1fr;
+  background: #6666;
+  text-align: center;
+  padding: 0rem;
+  margin: 0.1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  align-items: center;
+}
+.item div:nth-child(2) {
+  text-align: left;
+}
+
+.item img {
+  width: 2rem;
+  margin-right: 0.5rem;
+  border-radius: 0.25rem;
+}
+.country {
+  display: flex;
+  align-items: center;
+}
+.rank {
+  background: white;
+  border-radius: 0.5rem;
+  margin-right: 0.25rem;
+  padding: 0.25rem 0;
+  box-shadow: 0 0 10px -4px rgba(0, 0, 0, 1);
+}

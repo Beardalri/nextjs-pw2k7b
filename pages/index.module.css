@@ -1,0 +1,13 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr 50% 1fr 1fr 1fr 1fr;
+  text-align: center;
+  padding: 0.5rem;
+  margin: 0.25rem 1rem;
+}
+.header div {
+  padding: 0.25rem;
+}
+.header div:nth-child(2) {
+  text-align: left;
+}
