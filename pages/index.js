@@ -7,8 +7,20 @@ export default function Home() {
   const [list, setList] = useState(dados);
 
   function handleFilterByGold() {
-    const filteredList = [...list].filter(x => item.GoldMedals > 0);
+    const filteredList = [...dados].filter(item => item.GoldMedals > 0);
     setList(filteredList);
+  }
+
+  function handleClearFilter() {
+    setList(dados);
+  }
+
+  function handleSortByBronzeMedal(){
+    const sortedList = [...list]
+    .sort((a,b) => a.BronzeMedals - 
+    b.BronzeMedals)
+    .reverse();
+    setList(sortedList);
   }
 
   return (
@@ -16,7 +28,7 @@ export default function Home() {
       <h1> Quadro de Medalhas - Tokio 2020 </h1>
       <div>
         <button onClick={handleFilterByGold}>Somente com Ouro</button>
-        <button>Todos</button>
+        <button onClick={handleFilterByGold}>Todos</button>
       </div>
       <div>Resultado: {list.length} itens</div>
       <div>
@@ -25,7 +37,7 @@ export default function Home() {
           <div>Time</div>
           <div>Ouro</div>
           <div>Prata</div>
-          <div>Bronze</div>
+          <div onclick={handleSorteByGold}>Bronze</div>
           <div>Total</div>
         </div>
 
