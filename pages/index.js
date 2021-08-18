@@ -35,9 +35,9 @@ export default function Home() {
         <div className={styles.header}>
           <div>#</div>
           <div>Time</div>
-          <div>Ouro</div>
-          <div>Prata</div>
-          <div onclick={handleSorteByGold}>Bronze</div>
+          <div onClick={handleSortByOuroMedal}>Ouro</div>
+          <div onClick={handleSortByPrataMedal}>Prata</div>
+          <div onclick={handleSorteByBrozeMedal}>Bronze</div>
           <div>Total</div>
         </div>
 
