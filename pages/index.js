@@ -9,15 +9,18 @@ export default function Home() {
 
   useEffect(() => {
     setTimeout(() => {
-      setCount(prevState => prevState + 1);
-    ), 500);
+      //setCount (count + 1); //PIOR
+      setCount(prevState => prevState + 1); //MELHOR
+    ), 1500);
   }, [list]);
   //OUTRA FORMA DE USAR
   //useEffect(function() {}, []);
 
   function handleFilterByGold() {
-    const filteredList = [...dados].filter(item => item.GoldMedals > 0);
-    setList(filteredList);
+    try {
+      const filteredList = [...dados].filter(item => item.GoldMedals > 0);
+      setList(filteredList);
+      catch
   }
 
   function handleClearFilter() {
