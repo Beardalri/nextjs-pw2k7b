@@ -5,6 +5,13 @@ import styles from './index.module.css';
 
 export default function Home() {
   const [list, setList] = useState(dados);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    setCount(count + 1);
+    }, [list]);
+  //OUTRA FORMA DE USAR
+  //useEffect(function() {}, []);
 
   function handleFilterByGold() {
     const filteredList = [...dados].filter(item => item.GoldMedals > 0);
@@ -30,7 +37,8 @@ export default function Home() {
         <button onClick={handleFilterByGold}>Somente com Ouro</button>
         <button onClick={handleFilterByGold}>Todos</button>
       </div>
-      <div>Resultado: {list.length} itens</div>
+      <div>Resultado: {list.length} itens ({count})
+      </div>
       <div>
         <div className={styles.header}>
           <div>#</div>
