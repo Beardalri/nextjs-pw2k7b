@@ -8,8 +8,10 @@ export default function Home() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    setCount(count + 1);
-    }, [list]);
+    setTimeout(() => {
+      setCount(prevState => prevState + 1);
+    ), 500);
+  }, [list]);
   //OUTRA FORMA DE USAR
   //useEffect(function() {}, []);
 
