@@ -19,7 +19,7 @@ export default function Home() {
 
   function handleFilterByGold() {
     try {
-      const filteredDados = [...dados].filter(item => item.GoldMedals > 0);
+      const filteredList = [...dados].filter(item => item.GoldMedals > 0);
       setList(filteredList);
       
   }catch(err){}
