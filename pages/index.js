@@ -11,7 +11,7 @@ export default function Home() {
     setTimeout(() => {
       //setCount (count + 1); //PIOR
       setCount(prevState => prevState + 1); //MELHOR
-    ), 1500);
+    }, 1500);
   }, [list]);
   //OUTRA FORMA DE USAR
   //useEffect(function() {}, []);
