@@ -2,7 +2,7 @@ import style from './RankItem.module.css';
 export default function RankItem(props) {
   return (
     <div className={props.theme == 'dark' ? 
-    style.itemDark : styles.itemLight}>
+    styles.itemDark : styles.itemLight}>
       <div>
         <div className={style.rank}>{props.item.Rank}</div>
       </div>
