@@ -6,6 +6,7 @@ import styles from './index.module.css';
 export default function Home() {
   const [list, setList] = useState(dados);
   const [count, setCount] = useState(0);
+  const [theme, setTheme] = useState
 
   useEffect(() => {
     setTimeout(() => {
@@ -55,7 +56,7 @@ export default function Home() {
         </div>
 
         {dados.map(item => {
-          return <RankItem item={item} />;
+          return <RankItem theme={theme} item={item} />;
         })}
       </div>
     </div>
