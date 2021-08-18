@@ -21,8 +21,9 @@ export default function Home() {
     try {
       const filteredList = [...dados].filter(item => item.GoldMedals > 0);
       setList(filteredList);
-      catch
-  }
+      
+  }catch(err){}
+}
 
   function handleClearFilter() {
     setList(dados);
