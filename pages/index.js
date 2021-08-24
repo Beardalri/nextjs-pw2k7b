@@ -6,7 +6,7 @@ import styles from './index.module.css';
 export default function Home() {
   const [list, setList] = useState(dados);
   const [count, setCount] = useState(0);
-  const [theme, setTheme] = useState;
+  const [theme, setTheme] = useState
 
   useEffect(() => {
     setTimeout(() => {
